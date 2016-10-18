@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2163ED2D1DB658BD00187E61 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163ED2C1DB658BD00187E61 /* Meal.swift */; };
 		21A92E921DAE6A1D00C13341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A92E911DAE6A1D00C13341 /* AppDelegate.swift */; };
 		21A92E941DAE6A1D00C13341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A92E931DAE6A1D00C13341 /* ViewController.swift */; };
 		21A92E971DAE6A1D00C13341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A92E951DAE6A1D00C13341 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2163ED2C1DB658BD00187E61 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		21A92E8E1DAE6A1D00C13341 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A92E911DAE6A1D00C13341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A92E931DAE6A1D00C13341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				21A92E931DAE6A1D00C13341 /* ViewController.swift */,
 				21A92E951DAE6A1D00C13341 /* Main.storyboard */,
 				21ED4CA41DAF850A00CB4FEC /* RatingControl.swift */,
+				2163ED2C1DB658BD00187E61 /* Meal.swift */,
 				21A92E981DAE6A1D00C13341 /* Assets.xcassets */,
 				21A92E9A1DAE6A1D00C13341 /* LaunchScreen.storyboard */,
 				21A92E9D1DAE6A1D00C13341 /* Info.plist */,
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2163ED2D1DB658BD00187E61 /* Meal.swift in Sources */,
 				21A92E941DAE6A1D00C13341 /* ViewController.swift in Sources */,
 				21ED4CA51DAF850A00CB4FEC /* RatingControl.swift in Sources */,
 				21A92E921DAE6A1D00C13341 /* AppDelegate.swift in Sources */,
