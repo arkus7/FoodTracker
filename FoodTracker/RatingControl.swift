@@ -23,7 +23,11 @@ class RatingControl: UIView {
     let spacing = 5
     let starCount = 5
     
-    var rating = 0;
+    var rating = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
     var ratingButtons = [UIButton]()
     
     // MARK: Initialization
@@ -39,7 +43,7 @@ class RatingControl: UIView {
             
             button.setImage(emptyStarImage, for: .normal)
             button.setImage(filledStarImage, for: .selected)
-            button.setImage(emptyStarImage, for: [.highlighted, .selected])
+            button.setImage(filledStarImage, for: [.highlighted, .selected])
             
             button.adjustsImageWhenHighlighted = false
             
@@ -64,12 +68,21 @@ class RatingControl: UIView {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
+        
+        updateButtonSelectionStates()
     }
     
     // MARK: Button Action
     
     func ratingButtonTapped(button: UIButton) {
-        print("Button \(ratingButtons.index(of: button)!) pressed 👍")
+        rating = ratingButtons.index(of: button)! + 1
+        updateButtonSelectionStates()
+    }
+    
+    func updateButtonSelectionStates() {
+        for(index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
+        }
     }
 
 }
