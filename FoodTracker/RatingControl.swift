@@ -33,7 +33,7 @@ class RatingControl: UIView {
         super.init(coder: aDecoder)
         
         for _ in 0..<starCount {
-            let button = UIButton(frame: CGRect(x: 0, y: 0, width: size, height: size))
+            let button = UIButton()
             button.backgroundColor = UIColor.red
             button.addTarget(self, action: #selector(ratingButtonTapped(button:)), for: .touchDown)
             ratingButtons += [button]
@@ -42,14 +42,18 @@ class RatingControl: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 240, height: 44)
+        let buttonSize = Int(frame.size.height)
+        let width = (buttonSize * starCount) + (spacing * (starCount - 1))
+        
+        return CGSize(width: width, height: buttonSize)
     }
     
     override func layoutSubviews() {
-        var buttonFrame = CGRect(x: 0, y: 0, width: size, height: size)
+        let buttonSize = Int(frame.size.height)
+        var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
         for(index, button) in ratingButtons.enumerated() {
-            buttonFrame.origin.x = CGFloat(index * (size + spacing))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
     }
