@@ -22,7 +22,6 @@ class RatingControl: UIView {
     
     let spacing = 5
     let starCount = 5
-    let size = 44
     
     var rating = 0;
     var ratingButtons = [UIButton]()
