@@ -81,6 +81,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         photoImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
+        checkValidName()
     }
     
     // MARK: Navigation
