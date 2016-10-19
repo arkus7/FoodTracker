@@ -26,6 +26,13 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         super.viewDidLoad()
         mealName.delegate = self
         checkValidName()
+        
+        if let meal = meal {
+            mealName.text = meal.name
+            navigationItem.title = meal.name
+            photoImageView.image = meal.photo
+            ratingControl.rating = meal.rating
+        }
     }
 
     override func didReceiveMemoryWarning() {
