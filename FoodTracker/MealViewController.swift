@@ -50,7 +50,16 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        checkValidName()
+    }
+    
+    func checkValidName() {
+        let text = mealName.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
     }
     
     // MARK: UIImagePickerControllerDelegate
