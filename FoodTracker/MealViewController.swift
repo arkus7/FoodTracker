@@ -25,6 +25,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     override func viewDidLoad() {
         super.viewDidLoad()
         mealName.delegate = self
+        checkValidName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +52,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidName()
+        navigationItem.title = textField.text
     }
     
     func checkValidName() {
